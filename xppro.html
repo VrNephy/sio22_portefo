@@ -45,54 +45,72 @@
 					ainsi que de la gestion d’actifs (immobilisations).</p>
 				<p>ATEXIOM édite et propose également une solution innovante d’archivage applicatif.</p><br>
 				<br>
-				<h2>Premier stage chez Atexiom</h2>
-
-
-
+				
+				<h2>Premier stage chez Atexiom (2021)</h2>
 				<li>Au sein de l’entreprise Atexiom, j’ai eu pour mission de réaliser une application d’archivage de
-					fichiers textes.
+					fichiers FEC.
 
 					En informatique, une archive est une représentation abstraite d’un ensemble d’élément qui peuvent
 					être des fichiers et des répertoires. Dans notre cas l’archivage concernera le fichier des Ecritures
 					Comptables (FEC) généralement disponible au format délimité CSV.
 				</li>
+				<br>
+				<li>
+					Le FEC (Fichier des écritures Comptables) est un fichier généré par le logiciel de compatibilité de l’entreprise ou de son expert-comptable. Il sert de base à des contrôles de l’administration fiscale notamment pour des tris, calculs, regroupement ou classement des données.
+				</li>
+				<br>
+				<li>
+					<li>En cas de remise d’un Fichier des Ecritures Comptables non conformes ou de non remise du fichier,
+						l’entreprise s’expose à une amende de : <br>
+
+						-	10% de pénalité lorsqu’une rectification a été apportée (sans que cela ne soit inférieure à 5 000 euros).<br>
+						-	5 000 euros lorsqu’une rectification n’a pas été apportée.
+
+				</li><br>
+				
 				<p>- La première interface présente au démarrage de l’application nous permet de choisir le fichier
 					source (Annexe 1) que l’on souhaite archiver et aussi de donner le nom du package qui sera créé.
-					Nous devons aussi préciser le dossier où nous souhaitons que l’archive soit générée.
+					Nous devons aussi préciser le dossier où nous souhaitons que l’archive soit générée.On choisit le séparateur 
+					de données au sein de notre fichier source. Ensuite on précise le séparateur de décimal ainsi que le séparateur de milliers
+					qui seront transformés afin de correspondre au standard XML. Enfin on indique ou non si la première ligne présente dans le fichier contient le nom des colonnes.
+									</p>
+				<span><img style="margin-left: 18%;" src="https://media.discordapp.net/attachments/415449138747146250/963841187599491092/unknown.png" alt="" /></span>
 
-					Une fois cela fait, on choisit le séparateur de données au sein de notre fichier source. Ensuite on
-					précise le séparateur de décimal ainsi que le séparateur de milliers qui seront transformés afin de
-					correspondre au standard XML.
 
-					Enfin on indique ou non si la première ligne présente dans le fichier contient le nom des colonnes.
-					Quand on clique sur le bouton suivant, le package qui est un fichier XML est alors créé avec 2
-					grandes parties. La première partie configuration reprend toutes les informations que l’utilisateur
-					a rempli au sein de la première interface.
+				<p>Si la première ligne présente dans le fichier contient le nom des colonnes alors l’utilisateur est redirigé vers la seconde interface lui permettant de spécifier les noms des colonnes, leurs types, leurs formats (facultatif sauf si type Date sélectionné) et de mettre un commentaire (facultatif). Dans ce cas on récupère les noms des colonnes dans le fichier source et alimentons le premier tableau.</p>
+				<span><img style="margin-left: 13%;" src="https://cdn.discordapp.com/attachments/415449138747146250/963841187599491092/unknown.png" alt="" /></span>
+
+
+
+				<h2>Deuxième stage chez Atexiom (2022)</h2>
+				<p> Au sein de l’entreprise Atexiom, j’ai eu pour mission de réaliser une application permettant de 
+					générer une clé de licence à partir d’un formulaire, ainsi que la refonte du site vitrine de l’entreprise.
+
 				</p>
-				<span><img style="margin-left: 18%;" src="images/xppro1.png" alt="" /></span>
-
-
-				<p>Si la première ligne présente dans le fichier ne contient pas le nom des colonnes alors l’utilisateur
-					est redirigé vers la seconde interface lui permettant de spécifier les noms des colonnes, leurs
-					types, leurs formats (facultatif sauf si type Date sélectionné) et de mettre un commentaire
-					(facultatif). De plus il est possible de déplacer les lignes afin de les mettre dans l’ordre
-					souhaité mais aussi d’en ajouter de nouvelles ou d’en supprimer. </p>
-				<span><img style="margin-left: 13%;" src="images/xppro2.png" alt="" /></span>
-
-				<p>Si la première ligne présente dans le fichier contient le nom des colonnes alors l’utilisateur est
-					redirigé vers la seconde interface lui permettant de spécifier les noms des colonnes, leurs types,
-					leurs formats (facultatif sauf si type Date sélectionné) et de mettre un commentaire (facultatif).
-					Dans ce cas on récupère les noms des colonnes dans le fichier source et alimentons le premier
-					tableau.</p>
-				<span><img style="margin-left: 11%;" src="images/xppro3.png" alt="" /></span>
-
-				<h2>Deuxième stage chez Atexiom</h2>
+				<br>
+				<p> 
+					
+				L’interface demande à l’utilisateur de remplir un formulaire avec un nom de contact, adresse mail,
+				un code client, nombre de poste, date de fin, option d’achat, archivage, espace (taille). Une fois fait, la clé de licence 
+				est générée. Cette dernière est cryptée (cryptage customisé et non un cryptage type CryptoJS.AES.encrupt)
+				</p>
+				<span><img style="margin-left: 13%;" src="https://media.discordapp.net/attachments/415449138747146250/963844740250501190/unknown.png" alt="" /></span>
+				<br>
 				<p>
-				- Au sein de l’entreprise Atexiom j'ai suivi de formation JavaScript et réalisation d'un système de clé de 
-				licence (cryptage et décryptage personnalisé). De plus, j'ai participé à la refonte du site web de l'entreprise.
-				</p>
-
-
+				La partie la plus importante pour ce système de clé de licence est de conserver la logique de
+				cryptage pour ensuite obtenir le contenu initial (lire SerialKey).
+				Ici, le bouton « RefillWithKey » rempli un formulaire vide avec uniquement « SerialKey ».
+				</p><br>
+				<span><img style="margin-left: 13%;" src="https://cdn.discordapp.com/attachments/415449138747146250/963844792498937896/unknown.png" alt="" /></span>
+				<p>
+				on prend les informations de l’utilisateur pour en faire une clé de licence cryptée que l’entreprise peut lire.
+				Une fois cela fini, nous sommes passé à la refonte du site vitrine d’Atexiom. Voici a que ressemblait le site en 2015.
+				</p><br>
+				
+				<span><img style="margin-left: 13%;" src="https://cdn.discordapp.com/attachments/415449138747146250/963846393410224198/unknown.png" alt="" /></span>
+				<br>
+				<span><img style="margin-left: 13%;" src="https://cdn.discordapp.com/attachments/415449138747146250/963846428759838781/unknown.png" alt="" /></span>
+				
 				<h2>Formations réalisées en entreprise : </h2><br>
 				
 				<li>approfondissement de mes connaissances en JaveScript, HTML, CSS et PHP</li>
